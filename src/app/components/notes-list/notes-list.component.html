@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <h1 class="col-sm text-center">Your Notes</h1>
+    </div>
+    <div class="row flex-wrap" *ngIf="notes != null; else elseBlock">
+            <div class="col-md my-5" *ngFor="let note of notes ; let i = index">
+                <sn-note [note]="note" [noteIndex]="i"></sn-note>
+            </div>
+    </div>
+</div>
+<ng-template #elseBlock>
+    <div class="row">
+        <h3>There is no notes</h3>
+    </div>
+</ng-template>
+<button class="fixed-btn-top" color="primary" (click)="onAdd()"  mat-mini-fab>
+    <mat-icon>add</mat-icon>
+</button>
+<button class="fixed-btn" color="basic" (click)="onLogout()" mat-mini-fab>
+    <mat-icon>logout</mat-icon>
+</button>
+
+

@@ -1,0 +1,21 @@
+<button class="back-btn" mat-button (click)="onBack()">
+  <mat-icon>close</mat-icon>
+</button>
+<h1 mat-dialog-title>Note</h1>
+<form (ngSubmit)="onEdit(f.value)" #f="ngForm" [formGroup]="form">
+  <div mat-dialog-content>
+    <p>Title</p>
+    <mat-form-field>
+      <input matInput name="title" formControlName="title">
+    </mat-form-field>
+    <hr>
+    <p>Description</p>
+    <mat-form-field>
+      <textarea matInput name="description" formControlName="description"></textarea>
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button type="submit" >{{data.editText}}</button>
+    <button mat-button type="button" (click)="onDelete()" *ngIf="this.data.mode == 'view'">Delete</button>
+  </div>
+</form>

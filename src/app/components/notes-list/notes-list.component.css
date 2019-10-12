@@ -1,0 +1,13 @@
+.fixed-btn-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.fixed-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+button {
+    outline: 0px;
+}

@@ -1,0 +1,16 @@
+<mat-card class="note-card">
+    <mat-card-header>
+        <mat-card-title>
+            <p class="text-header">{{note?.title}}</p>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <p class="text-header">{{note?.date | date}}</p>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-button color="primary" (click)="openDialog()">View</button>
+      </mat-card-actions>
+</mat-card>

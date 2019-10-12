@@ -1,0 +1,17 @@
+<div class="container ">
+    <div class="row">
+        <div class="col-lg custom-width">
+            <form [formGroup]="form" (ngSubmit)="onSubmit(f.value)" #f="ngForm"> 
+                <h2 class="text-center">Login</h2>
+                <mat-form-field class="w-100">
+                    <input matInput placeholder="Email" type="email" name="email" formControlName="email">
+                </mat-form-field><br>
+                <mat-form-field class="w-100">
+                    <input matInput placeholder="Password" type="password" name="password" formControlName="password">
+                </mat-form-field><br>
+                <button mat-raised-button color="primary" class="float-right mr-4  mt-1" type="submit" [disabled]="!f.valid">Login</button> 
+                <button mat-raised-button color="primary" class="float-left ml-4  mt-1" type="button" [routerLink]="['/home']" >Return</button> 
+            </form>
+        </div>
+    </div>
+</div>
