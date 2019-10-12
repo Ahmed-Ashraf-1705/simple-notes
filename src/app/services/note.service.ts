@@ -57,13 +57,8 @@ export class NoteService {
     let notes: Array<any> = [];
     // get notes
     this.fetchNotes().subscribe( data => {
-      console.log('data')
-      console.log(data)
       notes = notes.concat(data);
       // detach item using its index
-      console.log('index');
-      console.log(index);
-      console.log(notes);
       notes.splice(index, 1);
 
       // resubmit new notes
